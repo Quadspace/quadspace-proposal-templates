@@ -1,0 +1,101 @@
+<!-- Quadspace Proposal Template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quadspace Proposal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../assets/logo.png" alt="Quadspace Logo" class="logo">
+            <h1>Scope of Work for {{ client.name }} {{ client.location }}</h1>
+        </div>
+
+        <div class="people-header">People</div>
+        <table class="people-table">
+            <tr>
+                <td class="quadspace-col">
+                    {% for contact in quadspace.contacts %}
+                        <p><b>{{ contact.name }}</b>, <i>{{ contact.title }}</i></p>
+                    {% endfor %}
+                </td>
+                <td class="client-col">
+                    {% if client.logo %}
+                        <img src="{{ client.logo }}" alt="Client Logo" class="client-logo">
+                    {% endif %}
+                    {% for contact in client.contacts %}
+                        <p><b>{{ contact.name }}</b>, <i>{{ contact.title }}</i></p>
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+
+        <div class="project-overview">
+            <h2>1. Project Overview</h2>
+            <p>{{ project.overview }}</p>
+        </div>
+
+        <div class="project-scope">
+            <h2>2. Project Scope</h2>
+            {% for phase in project.phases %}
+                <div class="phase">
+                    <h3>{{ loop.index }}. {{ phase.name }}</h3>
+                    <p>{{ phase.description }}</p>
+                    {% if phase.deliverables %}
+                        <ul>
+                            {% for item in phase.deliverables %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="cost-summary">
+            <h2>3. Investment</h2>
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for phase in project.phases %}
+                        <tr>
+                            <td>{{ phase.name }}</td>
+                            <td>${{ "%.2f"|format(phase.amount) }}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr class="total-row">
+                        <td>Total</td>
+                        <td>${{ "%.2f"|format(project.total_amount) }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="signature-section">
+            <div class="signature-box">
+                <p>For Quadspace:</p>
+                <div class="signature-line"></div>
+                <p>Name: _________________________</p>
+                <p>Date: _________________________</p>
+            </div>
+            <div class="signature-box">
+                <p>For {{ client.name }}:</p>
+                <div class="signature-line"></div>
+                <p>Name: _________________________</p>
+                <p>Date: _________________________</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Thank you for the opportunity to partner with you.</p>
+        </div>
+    </div>
+</body>
+</html>

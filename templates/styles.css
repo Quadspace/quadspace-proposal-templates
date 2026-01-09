@@ -1,0 +1,167 @@
+/* Quadspace Proposal Template Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 24px;
+    color: #00BCD4;
+}
+
+h2 {
+    font-size: 18px;
+    color: #00BCD4;
+    border-bottom: 2px solid #00BCD4;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.people-header {
+    background-color: #00BCD4;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.people-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.people-table td {
+    padding: 15px;
+    vertical-align: top;
+    border: 1px solid #eee;
+}
+
+.people-table .quadspace-col {
+    width: 50%;
+}
+
+.people-table .client-col {
+    width: 50%;
+}
+
+.client-logo {
+    max-width: 100px;
+    float: right;
+}
+
+.project-overview, .project-scope {
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.phase {
+    margin-bottom: 20px;
+}
+
+.phase h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+.cost-summary {
+    margin-top: 40px;
+}
+
+.cost-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cost-table th, .cost-table td {
+    padding: 10px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.cost-table th {
+    background-color: #f9f9f9;
+}
+
+.total-row td {
+    font-weight: bold;
+}
+
+.signature-section {
+    margin-top: 60px;
+    page-break-inside: avoid;
+}
+
+.signature-box {
+    display: inline-block;
+    width: 45%;
+    margin-right: 5%;
+}
+
+.signature-line {
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 5px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 10px;
+    color: #999;
+}
+
+/* Print optimization */
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .phase {
+        page-break-inside: avoid;
+    }
+    
+    h2 {
+        page-break-after: avoid;
+    }
+}
+
+/* PDF generation specific */
+@page {
+    size: letter;
+    margin: 0.75in;
+}
+
+.page-break {
+    page-break-before: always;
+}

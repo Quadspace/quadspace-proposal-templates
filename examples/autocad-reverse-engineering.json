@@ -1,0 +1,73 @@
+{
+  "client": {
+    "name": "GE Appliances",
+    "location": "Louisville, KY",
+    "logo": "../assets/client-logos/ge-appliances.png",
+    "contacts": [
+      {
+        "name": "Kelly Gierhart",
+        "title": "GE Appliances"
+      },
+      {
+        "name": "Katie Preiser",
+        "title": "GE Appliances"
+      }
+    ]
+  },
+  "quadspace": {
+    "contacts": [
+      {
+        "name": "Mike Sanders",
+        "title": "Quadspace"
+      }
+    ]
+  },
+  "project": {
+    "title": "AutoCAD Reverse Engineering Project",
+    "overview": "The objective of this project is to reverse engineer the current state layout from existing facility documentation and create accurate 2D AutoCAD drawings. This project will provide GE Appliances with precise, up-to-date facility layouts that can be used for future planning, optimization, and operational improvements. The project aims to achieve these deliverables within a 90-day timeframe, commencing on January 15th, 2026.",
+    "total_amount": 7500,
+    "phases": [
+      {
+        "name": "Define",
+        "description": "The Define phase establishes the foundation for the project by gathering requirements, understanding the existing facility conditions, and creating a detailed project plan. This phase ensures alignment between Quadspace and GE Appliances on objectives, scope, and success criteria.",
+        "deliverables": [
+          "Conduct virtual meetings with key stakeholders to understand facility layout requirements and specific documentation needs",
+          "Review existing facility documentation, photographs, and any available legacy drawings to gain insights into current conditions",
+          "Collaboratively define project objectives, success criteria, and deliverable specifications with GE Appliances",
+          "Establish measurement protocols and quality standards for the reverse engineering process",
+          "Create detailed project timeline with milestones and review checkpoints"
+        ],
+        "amount": 2500
+      },
+      {
+        "name": "Execute",
+        "description": "The Execute phase involves the core reverse engineering work, including on-site or virtual measurements, data collection, and the creation of professional 2D AutoCAD drawings. This phase delivers the primary project outputs with rigorous quality control.",
+        "deliverables": [
+          "Conduct comprehensive facility measurements using industry-standard tools and methodologies",
+          "Document all relevant facility features including structural elements, equipment locations, storage configurations, and material flow paths",
+          "Create detailed 2D AutoCAD drawings with proper layering, dimensioning, and annotation standards",
+          "Incorporate existing equipment specifications, aisle widths, door locations, and critical operational zones",
+          "Conduct quality assurance reviews to ensure drawing accuracy and completeness",
+          "Provide interim review sessions with GE Appliances team for feedback and refinements"
+        ],
+        "amount": 3500
+      },
+      {
+        "name": "Enhancements",
+        "description": "The Enhancements phase focuses on finalizing the deliverables, providing training on how to use and maintain the AutoCAD files, and offering recommendations for future facility optimization opportunities identified during the reverse engineering process.",
+        "deliverables": [
+          "Finalize all AutoCAD drawings with client-requested revisions and refinements",
+          "Provide comprehensive training session on how to navigate, edit, and maintain the AutoCAD files",
+          "Deliver organized file package with proper naming conventions and layer standards documentation",
+          "Provide recommendations report highlighting potential optimization opportunities observed during the project",
+          "Offer 30-day post-delivery support for questions and minor adjustments"
+        ],
+        "amount": 1500
+      }
+    ]
+  },
+  "terms": {
+    "payment_schedule": "Net 30",
+    "start_date": "2026-01-15"
+  }
+}
