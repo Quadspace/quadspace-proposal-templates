@@ -1,14 +1,15 @@
-/* industrial-engineer.ai Proposal Template Styles */
+/* industrial-engineer.ai Proposal Template Styles - Print-Friendly Version */
 
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Inter:wght@400&family=JetBrains+Mono&display=swap");
 
 :root {
-  --background: #0A0A0A;
-  --foreground: #F5F5F5;
+  --background: #FFFFFF;
+  --foreground: #0A0A0A;
   --primary: #9ADD26;
-  --primary-foreground: #0A0A0A;
+  --primary-dark: #7AB820;
   --secondary: #4632DA;
-  --border: #818287;
+  --border: #333333;
+  --muted: #666666;
   --font-display: "Rajdhani", sans-serif;
   --font-body: "Inter", sans-serif;
 }
@@ -31,7 +32,7 @@ body {
 .header {
     text-align: center;
     padding: 20px 0;
-    border-bottom: 1px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
 }
 
 .logo {
@@ -44,7 +45,7 @@ h1, h2, h3 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--primary);
+    color: var(--foreground);
 }
 
 h1 {
@@ -54,17 +55,23 @@ h1 {
 
 h2 {
     font-size: 18px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 2px solid var(--primary);
     padding-bottom: 8px;
     margin-top: 25px;
     margin-bottom: 15px;
 }
 
 .people-section {
-    background-color: #1a1a1a;
-    border: 1px solid var(--border);
+    background-color: #F8F8F8;
+    border: 2px solid var(--border);
     padding: 15px;
     margin: 20px 0;
+}
+
+.people-section h3 {
+    color: var(--primary-dark);
+    font-size: 12px;
+    margin: 0 0 8px 0;
 }
 
 .people-table {
@@ -79,7 +86,7 @@ h2 {
 
 .people-table .quadspace-col {
     width: 50%;
-    border-right: 1px solid var(--border);
+    border-right: 2px solid var(--border);
 }
 
 .client-logo {
@@ -106,7 +113,8 @@ ul li::before {
     content: "\2713";
     position: absolute;
     left: 0;
-    color: var(--primary);
+    color: var(--primary-dark);
+    font-weight: bold;
 }
 
 .phase {
@@ -135,15 +143,16 @@ ul li::before {
 }
 
 .cost-table th {
-    background-color: #1a1a1a;
+    background-color: #F8F8F8;
     font-family: var(--font-display);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    font-weight: 700;
 }
 
 .total-row td {
     font-weight: bold;
-    color: var(--primary);
+    background-color: #F0F0F0;
 }
 
 .signature-section {
@@ -157,7 +166,7 @@ ul li::before {
 }
 
 .signature-line {
-    border-top: 1px solid var(--foreground);
+    border-top: 2px solid var(--border);
     margin-top: 30px;
     padding-top: 5px;
 }
@@ -166,7 +175,8 @@ ul li::before {
     text-align: center;
     margin-top: 30px;
     font-size: 9px;
-    color: var(--border);
+    color: var(--muted);
+    font-style: italic;
 }
 
 /* PDF generation specific */
@@ -177,4 +187,20 @@ ul li::before {
 
 .page-break {
     page-break-before: always;
+}
+
+/* Print optimization */
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .phase {
+        page-break-inside: avoid;
+    }
+    
+    h2 {
+        page-break-after: avoid;
+    }
 }
