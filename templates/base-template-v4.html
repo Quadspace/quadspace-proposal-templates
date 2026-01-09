@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>industrial-engineer.ai Proposal</title>
+    <link rel="stylesheet" href="styles-v4.css">
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="header-content">
+                <img src="../assets/ie-ai-logo.png" alt="industrial-engineer.ai Logo" class="logo">
+                <div class="header-title">
+                    <h1>PROJECT <span class="accent">PROPOSAL</span></h1>
+                    <div class="header-meta">
+                        {{ terms.date }} | Prepared for {{ client.name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="client-bar">
+                <div class="column">
+                    <h3>Client</h3>
+                    <p>
+                        <strong>{{ client.name }}</strong><br>
+                        {{ client.location }}<br>
+                        Attn: {{ client.contacts[0].name }}, {{ client.contacts[0].title }}
+                    </p>
+                </div>
+                <div class="column">
+                    <h3>Prepared By</h3>
+                    <p>
+                        <strong>industrial-engineer.ai</strong><br>
+                        {{ quadspace.contacts[0].name }}<br>
+                        {{ quadspace.contacts[0].title }}
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Project Overview</h2>
+                <p>{{ project.overview }}</p>
+            </div>
+
+            <div class="section">
+                <h2>Scope of Work</h2>
+                {% for phase in project.phases %}
+                <div class="phase">
+                    <h3>{{ phase.name }}</h3>
+                    <p>{{ phase.description }}</p>
+                    <ul>
+                        {% for item in phase.deliverables %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="investment-section">
+            {% if project.pricing_breakdown %}
+                <h2>Investment</h2>
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for phase in project.phases %}
+                        <tr>
+                            <td>{{ phase.name }} Phase</td>
+                            <td>${{ "%.2f"|format(phase.amount) }}</td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            <td>Total Project Investment</td>
+                            <td>${{ "%.2f"|format(project.total_amount) }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            {% else %}
+                <div class="total-line">
+                    <h2>Total Project Investment</h2>
+                    <p class="total-amount">${{ "%.2f"|format(project.total_amount) }}</p>
+                </div>
+            {% endif %}
+            {% if project.travel_included %}
+            <p class="travel-note">All travel and related expenses are included in the pricing above.</p>
+            {% endif %}
+        </div>
+
+        <div class="signature-section">
+            <div class="signature-box">
+                <div class="line"></div>
+                <p>{{ client.name }}</p>
+                <p>Authorized Signature</p>
+            </div>
+            <div class="signature-box">
+                <div class="line"></div>
+                <p>industrial-engineer.ai</p>
+                <p>Authorized Signature</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Thank you for the opportunity to partner with you. We look forward to helping you eliminate waste and defects.</p>
+        </div>
+    </div>
+</body>
+</html>
