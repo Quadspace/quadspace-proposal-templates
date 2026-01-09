@@ -184,9 +184,11 @@ body {
   background: linear-gradient(135deg, var(--color-dark) 0%, #1a1a1a 100%);
   color: white;
   padding: 35px 40px;
-  margin-top: 40px;
+  margin: 40px 0 0 0;
   position: relative;
   overflow: hidden;
+  page-break-before: auto;
+  page-break-inside: avoid;
 }
 
 .investment-section::after {
@@ -287,8 +289,8 @@ body {
 
 /* Signature Section */
 .signature-section {
-  margin-top: 60px;
-  padding: 0 60px 40px 60px;
+  margin-top: 50px;
+  padding: 0 60px 30px 60px;
   display: flex;
   justify-content: space-between;
   page-break-inside: avoid;
@@ -300,7 +302,7 @@ body {
 
 .signature-box .line {
   border-bottom: 2px solid var(--color-dark);
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -316,15 +318,24 @@ body {
 /* Footer */
 .footer {
   text-align: center;
-  padding: 20px 60px;
+  padding: 20px 60px 30px 60px;
   font-size: 8pt;
   color: var(--color-gray);
   font-style: italic;
   border-top: 1px solid var(--color-border);
+  margin-top: 0;
 }
 
 @page {
   size: letter;
+  margin: 0;
+}
+
+@page :first {
+  margin: 0;
+}
+
+@page :nth(2) {
   margin: 0;
 }
 
