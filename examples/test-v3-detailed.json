@@ -1,0 +1,65 @@
+{
+  "client": {
+    "name": "GE Appliances",
+    "location": "Louisville, KY",
+    "contacts": [
+      {
+        "name": "Kelly Gierhart",
+        "title": "Operations Manager"
+      }
+    ]
+  },
+  "quadspace": {
+    "contacts": [
+      {
+        "name": "Mike Sanders",
+        "title": "Founder & CEO"
+      }
+    ]
+  },
+  "project": {
+    "title": "AutoCAD Reverse Engineering Project",
+    "overview": "This project will reverse engineer the current state layout from existing facility documentation and create accurate 2D AutoCAD drawings. The deliverables will provide GE Appliances with precise, up-to-date facility layouts for future planning and operational improvements within a 90-day timeframe.",
+    "total_amount": 7500,
+    "pricing_breakdown": true,
+    "travel_included": false,
+    "phases": [
+      {
+        "name": "Define",
+        "description": "Establish project foundation through requirements gathering, facility condition assessment, and detailed planning to ensure alignment on objectives and success criteria.",
+        "deliverables": [
+          "Conduct stakeholder meetings to understand layout requirements",
+          "Review existing documentation and legacy drawings",
+          "Define project objectives and success criteria",
+          "Establish measurement protocols and quality standards"
+        ],
+        "amount": 2500
+      },
+      {
+        "name": "Execute",
+        "description": "Perform core reverse engineering work including measurements, data collection, and creation of professional 2D AutoCAD drawings with rigorous quality control.",
+        "deliverables": [
+          "Conduct comprehensive facility measurements",
+          "Document structural elements and equipment locations",
+          "Create detailed 2D AutoCAD drawings with proper layering",
+          "Conduct quality assurance reviews for accuracy"
+        ],
+        "amount": 3500
+      },
+      {
+        "name": "Enhancements",
+        "description": "Finalize deliverables with training on AutoCAD file usage and maintenance, plus recommendations for future facility optimization opportunities.",
+        "deliverables": [
+          "Finalize drawings with client-requested revisions",
+          "Provide training on navigating and maintaining files",
+          "Deliver organized file package with documentation",
+          "Offer 30-day post-delivery support"
+        ],
+        "amount": 1500
+      }
+    ]
+  },
+  "terms": {
+    "date": "January 15, 2026"
+  }
+}

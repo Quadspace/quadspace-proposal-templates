@@ -1,0 +1,62 @@
+{
+  "client": {
+    "name": "ACME Manufacturing",
+    "location": "Detroit, MI",
+    "contacts": [
+      {
+        "name": "Sarah Johnson",
+        "title": "VP of Operations"
+      }
+    ]
+  },
+  "quadspace": {
+    "contacts": [
+      {
+        "name": "Mike Sanders",
+        "title": "Founder & CEO"
+      }
+    ]
+  },
+  "project": {
+    "title": "Warehouse Optimization Project",
+    "overview": "This project will analyze and optimize ACME Manufacturing's warehouse operations to reduce material handling time by 40% and improve inventory accuracy to 99.5%. The engagement will deliver a comprehensive implementation roadmap with measurable ROI targets and ongoing support to ensure sustained improvements.",
+    "total_amount": 12500,
+    "pricing_breakdown": false,
+    "travel_included": true,
+    "phases": [
+      {
+        "name": "Discovery & Analysis",
+        "description": "Conduct comprehensive assessment of current warehouse operations, identify bottlenecks, and establish baseline metrics for improvement tracking.",
+        "deliverables": [
+          "Current state process mapping and time studies",
+          "Bottleneck analysis and root cause identification",
+          "Baseline metrics dashboard for tracking improvements",
+          "Stakeholder interviews and requirements gathering"
+        ]
+      },
+      {
+        "name": "Solution Design",
+        "description": "Design optimized warehouse layout, material flow processes, and technology integration strategy tailored to ACME's specific operational needs.",
+        "deliverables": [
+          "Optimized warehouse layout design with CAD drawings",
+          "New material flow process documentation",
+          "Technology integration recommendations",
+          "ROI analysis and business case documentation"
+        ]
+      },
+      {
+        "name": "Implementation Support",
+        "description": "Provide hands-on support during implementation phase, including training, process validation, and performance monitoring to ensure successful adoption.",
+        "deliverables": [
+          "On-site implementation support and training",
+          "Process validation and quality assurance",
+          "Performance monitoring dashboard setup",
+          "30-day post-implementation support"
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "date": "January 15, 2026"
+  }
+}

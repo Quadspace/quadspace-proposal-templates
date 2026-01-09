@@ -19,7 +19,7 @@ def load_json_data(json_path):
 def generate_html(data, template_dir):
     """Generate HTML from template and data"""
     env = Environment(loader=FileSystemLoader(template_dir))
-    template = env.get_template('base-template.html')
+    template = env.get_template("base-template-v3.html")
     return template.render(**data)
 
 def generate_pdf(html_content, css_path, output_path):
@@ -43,7 +43,7 @@ def main():
     script_dir = Path(__file__).parent
     project_root = script_dir.parent
     template_dir = project_root / 'templates'
-    css_path = template_dir / 'styles.css'
+    css_path = template_dir / 'styles-v3.css'
     
     # Load data
     print(f"Loading data from {json_path}...")
