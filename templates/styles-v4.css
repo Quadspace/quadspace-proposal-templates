@@ -30,10 +30,6 @@ body {
   print-color-adjust: exact;
 }
 
-.page {
-  position: relative;
-}
-
 /* Bold Header Section */
 .header {
   background: linear-gradient(135deg, var(--color-dark) 0%, #1a1a1a 100%);
