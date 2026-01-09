@@ -1,100 +1,126 @@
-/* Quadspace Proposal Template Styles */
+/* industrial-engineer.ai Proposal Template Styles */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Inter:wght@400&family=JetBrains+Mono&display=swap");
+
+:root {
+  --background: #0A0A0A;
+  --foreground: #F5F5F5;
+  --primary: #9ADD26;
+  --primary-foreground: #0A0A0A;
+  --secondary: #4632DA;
+  --border: #818287;
+  --font-display: "Rajdhani", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    font-family: var(--font-body);
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--foreground);
+    background-color: var(--background);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
 .header {
     text-align: center;
-    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--primary);
 }
 
 .logo {
-    max-width: 200px;
-    margin-bottom: 20px;
+    max-width: 250px;
+    margin-bottom: 10px;
 }
 
 h1, h2, h3 {
+    font-family: var(--font-display);
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
 }
 
 h1 {
-    font-size: 24px;
-    color: #00BCD4;
+    font-size: 28px;
+    margin: 0;
 }
 
 h2 {
     font-size: 18px;
-    color: #00BCD4;
-    border-bottom: 2px solid #00BCD4;
-    padding-bottom: 5px;
-    margin-top: 30px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
-.people-header {
-    background-color: #00BCD4;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
+.people-section {
+    background-color: #1a1a1a;
+    border: 1px solid var(--border);
+    padding: 15px;
+    margin: 20px 0;
 }
 
 .people-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 30px;
 }
 
 .people-table td {
-    padding: 15px;
-    vertical-align: top;
-    border: 1px solid #eee;
+    padding: 10px;
+    vertical-align: middle;
 }
 
 .people-table .quadspace-col {
     width: 50%;
-}
-
-.people-table .client-col {
-    width: 50%;
+    border-right: 1px solid var(--border);
 }
 
 .client-logo {
-    max-width: 100px;
+    max-width: 80px;
     float: right;
 }
 
 .project-overview, .project-scope {
-    margin-bottom: 30px;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.phase {
     margin-bottom: 20px;
 }
 
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+ul li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+.phase {
+    margin-bottom: 15px;
+}
+
 .phase h3 {
-    font-size: 16px;
-    color: #333;
+    font-size: 14px;
+    color: var(--foreground);
+    margin-bottom: 5px;
 }
 
 .cost-summary {
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .cost-table {
@@ -103,63 +129,50 @@ ul {
 }
 
 .cost-table th, .cost-table td {
-    padding: 10px;
-    border: 1px solid #eee;
+    padding: 8px;
+    border: 1px solid var(--border);
     text-align: left;
 }
 
 .cost-table th {
-    background-color: #f9f9f9;
+    background-color: #1a1a1a;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .total-row td {
     font-weight: bold;
+    color: var(--primary);
 }
 
 .signature-section {
-    margin-top: 60px;
+    margin-top: 40px;
     page-break-inside: avoid;
 }
 
 .signature-box {
     display: inline-block;
-    width: 45%;
-    margin-right: 5%;
+    width: 48%;
 }
 
 .signature-line {
-    border-top: 1px solid #333;
-    margin-top: 40px;
+    border-top: 1px solid var(--foreground);
+    margin-top: 30px;
     padding-top: 5px;
 }
 
 .footer {
     text-align: center;
-    margin-top: 40px;
-    font-size: 10px;
-    color: #999;
-}
-
-/* Print optimization */
-@media print {
-    body {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-    
-    .phase {
-        page-break-inside: avoid;
-    }
-    
-    h2 {
-        page-break-after: avoid;
-    }
+    margin-top: 30px;
+    font-size: 9px;
+    color: var(--border);
 }
 
 /* PDF generation specific */
 @page {
     size: letter;
-    margin: 0.75in;
+    margin: 0.5in;
 }
 
 .page-break {
